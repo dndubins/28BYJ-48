@@ -6,7 +6,7 @@
  */
 
 #include <Arduino.h>
-#include <StepperMotor.h>
+#include <28BYJ-48.h>
 
 StepperMotor::StepperMotor(int in1, int in2, int in3, int in4){
   // store user's pin numbers into IN[] array
