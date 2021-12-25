@@ -5,8 +5,8 @@
  *
  */
 
-#ifndef 28BYJ48_h
-#define 28BYJ48_h
+#ifndef 28BYJ-48_h
+#define 28BYJ-48_h
 
 class StepperMotor {
 public:
