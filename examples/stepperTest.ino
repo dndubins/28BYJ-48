@@ -22,8 +22,8 @@ void setup(){
 }
 
 void loop(){
-  motor.step(2000,15);  // forward 2000 steps at 15 rpm
-  delay(2000);
-  motor.step(-2000,15);  // reverse 2000 steps at 15 rpm
-  delay(2000);
+  motor.step(500,15);  // forward 500 steps at 15 rpm
+  delay(1000);
+  motor.step(-500,15);  // reverse 500 steps at 15 rpm
+  delay(1000);
 }
