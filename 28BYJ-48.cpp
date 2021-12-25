@@ -8,7 +8,7 @@
 #include <Arduino.h>
 #include <28BYJ-48.h>
 
-StepperMotor::StepperMotor(int in1, int in2, int in3, int in4){
+StepperMotor::StepperMotor(byte in1, byte in2, byte in3, byte in4){
   // store user's pin numbers into IN[] array
   this->IN[0] = in1;
   this->IN[1] = in2;
