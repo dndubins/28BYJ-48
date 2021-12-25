@@ -24,9 +24,9 @@ void setup(){
 
 void loop(){
   Serial.println("Stepping clockwise.");
-  motorStep(4096,15);  // CW 4096 steps (1 rotation) @15rpm
+  motor.step(4096,15);  // CW 4096 steps (1 rotation) @15rpm
   delay(1000);
   Serial.println("Stepping counter-clockwise.");
-  motorStep(-4096,15); // CCW 4096 steps (1 rotation) @15rpm
+  motor.step(-4096,15); // CCW 4096 steps (1 rotation) @15rpm
   delay(1000);
 }
