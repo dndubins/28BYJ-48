@@ -34,8 +34,8 @@ void StepperMotor::step(int nSteps,float rpm){
     {0, 0, 0, 1}  // step 7    
   };
   static int mStep; // remember last val of mStep
-  for(int i=0;i<abs(mSteps);i++){ // STEP pulses
-    if(mSteps>0){ // clockwise
+  for(int i=0;i<abs(nSteps);i++){ // STEP pulses
+    if(nSteps>0){ // clockwise
       mStep++;
       if(mStep>7)mStep=0;
     }else{  // counter-clockwise
