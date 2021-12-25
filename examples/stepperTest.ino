@@ -19,11 +19,14 @@
 StepperMotor motor(8,9,10,11);
 
 void setup(){
+  Serial.begin(9600); // Start the serial monitor
 }
 
 void loop(){
-  motor.step(500,15);  // forward 500 steps at 15 rpm
+  Serial.println("Stepping clockwise.");
+  motorStep(4096,15);  // CW 4096 steps (1 rotation) @15rpm
   delay(1000);
-  motor.step(-500,15);  // reverse 500 steps at 15 rpm
+  Serial.println("Stepping counter-clockwise.");
+  motorStep(-4096,15); // CCW 4096 steps (1 rotation) @15rpm
   delay(1000);
 }
