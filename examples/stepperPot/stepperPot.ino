@@ -29,7 +29,7 @@ void setup(){
 }
 
 void loop(){
-  v=map(analogRead(potPin),0,255,0,4096); // scale #steps to something bigger
+  v=map(analogRead(potPin),0,1023,0,4096); // scale #steps to something bigger
   motor.step(v-last,15); // step difference at 15 rpm 
   last=v;
 }
