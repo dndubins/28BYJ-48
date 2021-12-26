@@ -1,4 +1,4 @@
-# 28BYJ-48 library for 28BYJ-48 DC stepper motor with ULN2003 stepper motor driver
+# 28BYJ-48 library for 28BYJ-48 stepper motor with ULN2003 stepper motor driver
 
 This is a simple stepper motor library for the 28BYJ-48 5V or 12V stepper motor, driven by the ULN2003 controller.
 
