@@ -26,6 +26,7 @@ int last=0;
 StepperMotor motor(8,9,10,11);
 
 void setup(){
+  last=map(analogRead(potPin),0,1023,0,4096); // take a starting measurement
 }
 
 void loop(){
