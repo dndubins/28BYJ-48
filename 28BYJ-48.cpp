@@ -45,7 +45,7 @@ void StepperMotor::step(int nSteps,float rpm){
     for(int j=0;j<4;j++){
       digitalWrite(this->IN[j],mSequence[mStep][j]);
     }
-    delay_(t)
+    delay_(t);
   }
 }
 
