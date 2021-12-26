@@ -45,11 +45,14 @@ void StepperMotor::step(int nSteps,float rpm){
     for(int j=0;j<4;j++){
       digitalWrite(this->IN[j],mSequence[mStep][j]);
     }
-    if(t<16383){ // delayMicroseconds() becomes less accurate after 16383 uS
-      delayMicroseconds(t); // use microsec delay if t < 16383
-    }else{
-      delay(t/1000); // use to millisec delay if t >= 16383 (will be important at speeds under 1 rpm)
-      //Note: rounding errors will accumulate at low speeds. Check that motor performance is adequate.
-    }
+    delay_(t)
   }
+}
+
+void StepperMotor::delay_(unsigned long x) // allows for delays <1ms (x is in microseconds)
+  if(x<16383){ // delayMicroseconds() becomes less accurate above 16383 uS
+    delayMicroseconds(t); // use microsec delay if t < 16383 usec
+  }else{
+    delay(t/1000); // use millisec delay if t >= 16383 usec (will be important at speeds under 1 rpm)
+  }  
 }
