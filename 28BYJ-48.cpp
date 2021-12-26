@@ -48,7 +48,8 @@ void StepperMotor::step(int nSteps,float rpm){
     if(t<16383){ // delayMicroseconds() becomes less accurate after 16383 uS
       delayMicroseconds(t); // use microsec delay if t < 16383
     }else{
-      delay(t/1000); // use to millisec delay if t >= 16383
+      delay(t/1000); // use to millisec delay if t >= 16383 (will be important at speeds under 1 rpm)
+      //Note: rounding errors will accumulate at low speeds. Check that motor performance is adequate.
     }
   }
 }
