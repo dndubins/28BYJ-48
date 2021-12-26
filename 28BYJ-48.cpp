@@ -24,14 +24,14 @@ void StepperMotor::step(int nSteps,float rpm){
   //convert rpm to time delay in microsec per step:
   unsigned long t=60000000/(rpm*4096); // #steps per revolution=4096
   bool mSequence[8][4]={
-    {1, 0, 0, 1}, // step 0
-    {1, 0, 0, 0}, // step 1
-    {1, 1, 0, 0}, // step 2
-    {0, 1, 0, 0}, // step 3
-    {0, 1, 1, 0}, // step 4
-    {0, 0, 1, 0}, // step 5
-    {0, 0, 1, 1}, // step 6
-    {0, 0, 0, 1}  // step 7    
+    {0, 0, 0, 1}, // step 0       
+    {0, 0, 1, 1}, // step 1
+    {0, 0, 1, 0}, // step 2
+    {0, 1, 1, 0}, // step 3
+    {0, 1, 0, 0}, // step 4
+    {1, 1, 0, 0}, // step 5
+    {1, 0, 0, 0}, // step 6    
+    {1, 0, 0, 1}  // step 7
   };
   static int mStep; // remember last val of mStep
   for(int i=0;i<abs(nSteps);i++){ // STEP pulses
