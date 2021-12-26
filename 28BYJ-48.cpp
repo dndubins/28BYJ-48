@@ -49,7 +49,7 @@ void StepperMotor::step(int nSteps,float rpm){
   }
 }
 
-void StepperMotor::delay_(unsigned long x) // allows for delays <1ms (x is in microseconds)
+void StepperMotor::delay_(unsigned long x){ // allows for delays <1ms (x is in microseconds)
   if(x<16383){ // delayMicroseconds() becomes less accurate above 16383 uS
     delayMicroseconds(t); // use microsec delay if t < 16383 usec
   }else{
