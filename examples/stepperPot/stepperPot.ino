@@ -1,6 +1,9 @@
 /* 28BYJ-48.h Library: Potentiometer control for 28BYJ-48 5V or 12V DC Stepper Motor 
  *  with ULN2003 Driver
  *  
+ * Connections:
+ * Plug the connector of the 28BYJ-48 stepper motor directly into the socket of the ULN2003.
+ *
  * Wire ULN2003 to Arduino Uno:
  * ----------------------------
  * Blue wire (A) - IN1 to Pin 8
